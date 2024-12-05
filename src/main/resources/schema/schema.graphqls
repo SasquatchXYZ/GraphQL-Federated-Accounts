@@ -1,0 +1,15 @@
+type Query {
+    accounts: [BankAccount]
+}
+
+type BankAccount @key(fields: "id") {
+    id: ID
+    currency: Currency
+    balance: Float
+    status: String
+}
+
+# Supported Currencies
+enum Currency {
+    EUR, CAD, USD
+}
